@@ -1,6 +1,8 @@
 #!/bin/bash
 clear;
 
+rating=(["0"]="Ice Cream" ["10"]="Literally a fridge" ["20"]="Holy Potatoes!" ["30"]="Perfect" ["40"]="Good" ["50"]="Poor" ["60"]="Bad" ["70"]="About to burn your house down" ["150"]="You'll need water. Lots of water.");
+
 loadTemp(){
 	toNum $(vcgencmd measure_temp);
 	temps[$1]=$temp;
@@ -30,6 +32,16 @@ findHighest(){
 	done
 }
 
+findRating(){
+	echo "Rating your temperature...";
+	rate="No Rate Found";
+	for i in "${!rating[@]}"; do
+		if(($1 > $i)); then
+			rate="${rating[$i]}";
+		fi;
+	done
+}
+
 toNum(){
 	temp=$(sed 's/[^0-9 | \.]*//g' <<< $1);
 }
@@ -43,9 +55,11 @@ done
 
 findHighest;
 findAvg;
+findRating $avg;
 clear;
 echo "Results: ";
 echo "";
 echo "Highest temp: $act 'C";
 echo "Average temp: $avg 'C";
 echo "Last temp: ${temps[${#temps[@]}]} 'C";
+echo "Rating: $rate";
