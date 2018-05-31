@@ -27,7 +27,16 @@ Results:
 Highest temp: 42.9 'C
 Average temp: 41 'C
 Last temp: 40.8 'C
+Rating: Good
+```
 
+Debug
+----
+
+If you cannot run the file because of line endings (^M), this likely means you have edited the file in windows env.
+Easy fix for this is to run this command line:
+```
+$ sed -i -e 's/\r$//' temp.sh
 ```
 
 License
