@@ -1,4 +1,5 @@
 # Raspberry PI Temperature
+![Logo](https://github.com/TomYoki/raspberry-cpu-temp/blob/master/assets/RPi.png)
 
 Easy-to-use tool to get cpu-idle state temperature and report statistics.
 This tool will work by default on all elinux systems, this includes raspbian.
