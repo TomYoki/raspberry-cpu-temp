@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 clear;
 prev=$(<prev.data);
 rating=(["0"]="Ice Cream" ["10"]="Literally a fridge" ["20"]="Holy Potatoes!" ["30"]="Perfect" ["40"]="Good" ["50"]="Poor" ["60"]="Bad" ["70"]="About to burn your house down" ["150"]="You'll need water. Lots of water.");
