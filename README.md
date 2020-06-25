@@ -1,4 +1,4 @@
-![Logo](https://github.com/TomYoki/raspberry-cpu-temp/blob/master/assets/RPi.png)
+![Logo](https://github.com/tomburgs/raspberry-cpu-temp/blob/master/assets/RPi.png)
 # Raspberry PI Temperature
 
 Easy-to-use tool to get cpu-idle state temperature and report statistics.
@@ -9,7 +9,7 @@ Get started
 
 To get started, clone the repository.
 ```
-$ git clone https://github.com/TomYoki/raspberry-cpu-temp
+$ git clone https://github.com/tomburgs/raspberry-cpu-temp
 ```
 in order to launch the script navigate to it's folder and launch it.
 ```sh
